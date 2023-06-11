@@ -4,6 +4,8 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
 
 /* ensure consistent layout and sizing */
@@ -263,5 +265,43 @@ a {
     .btn {
         font-size: 1.5rem;
     }
+}
 
+/* inputs */
+.input {
+    padding: 1.5rem 3.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    outline: 0;
+    color: var(--color-headings);
+}
+
+::placeholder {
+    color: #cdcbd7;
+    font-size: 2rem;
+}
+
+.input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+/* when input is in an input group */
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    /* make the input grow to take up all the available space*/
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+    margin: 4px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .input {
+        font-size: 1.5rem;
+    }
 }
