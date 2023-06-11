@@ -94,5 +94,43 @@ a {
         font-size: 1.5rem;
     }
 
-    
+
+}
+
+/* Badges */
+/* we have badges in different size and different color */
+/* use object oriented CSS method to separate structure from skin */
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+    /* the badge won't wrap into second line*/
+}
+
+/* use BEM naming conversion to separate component from modifier */
+.badge--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width :1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+
 }
