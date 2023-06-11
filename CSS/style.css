@@ -1,11 +1,13 @@
 :root {
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
-    --color-accent: #ff34 00;
+    --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
 
 }
+
+/* Typography */
 
 html {
     font-size: 62.5%;
@@ -60,4 +62,37 @@ p {
         font-size: 2.4rem;
     }
 
+}
+
+/* Link */
+
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow:after {
+    content: '-->';
+    margin-left: 5px;
+    /* px is used to ensure the space is fi xed in any case */
+    transition: margin 0.15s;
+}
+
+/* select the feature after link arrow at hover state */
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+
+    
 }
