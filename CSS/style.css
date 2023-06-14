@@ -16,6 +16,11 @@
     box-sizing: border-box;
 }
 
+/* to set the max height for mobile and desktop */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
 
 /* Typography */
 
@@ -103,8 +108,6 @@ a {
     .link-arrow {
         font-size: 1.5rem;
     }
-
-
 }
 
 /* Badges */
@@ -143,7 +146,6 @@ a {
     .badge--small {
         font-size: 1.2rem;
     }
-
 }
 
 /* lists */
@@ -614,7 +616,8 @@ a {
     /* using max-height instead of display to make it overflow */
     max-height: 0;
     overflow: hidden;
-    opacity: 0;/* create fade out effect */
+    opacity: 0;
+    /* create fade out effect */
     transition: all 0.3s;
 }
 
@@ -626,4 +629,40 @@ a {
     /* when max-height: set to 100vh allow it to take maximum of 100% height; */
     max-height: 100vh;
     opacity: 1;
+}
+
+/* block */
+.block {
+    --padding-vertical: 6rem;
+    /* var available to padding and all the children*/
+    padding: var(--padding-vertical) 2rem;
+    /* border: 2px solid red; */
+
+}
+
+.block__header {
+    text-align: center;
+}
+
+.block__heading {
+    margin-top: 0;
+}
+
+.block--dark {
+    background: #000;
+    color: #7b858b;
+}
+
+.block--dark .block__heading {
+    color: white;
+}
+
+.block--skewed-right {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
