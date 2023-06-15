@@ -365,6 +365,10 @@ a {
 }
 
 /* plans */
+.plan {
+  outline: 0;
+}
+
 .plan__name {
   color: white;
   margin: 0;
@@ -395,6 +399,13 @@ a {
 }
 
 /* popular plan */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -407,6 +418,14 @@ a {
   /* need to make the parent a relative position, so popular is on top of the parent */
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -763,7 +782,6 @@ a {
 }
 
 .block-domain__prices {
-  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -778,9 +796,16 @@ a {
   .block-domain__prices {
     display: grid;
     /* min at 100px, any extra space equally distribute to each column */
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); 
-
-
-   
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
+}
+
+/* plan block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
