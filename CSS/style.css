@@ -230,7 +230,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -325,6 +325,7 @@ a {
   flex-grow: 1;
   /* make the input grow to take up all the available space*/
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -789,7 +790,8 @@ a {
 
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  color: var(--color-headings);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   font-size: 2rem;
   font-weight: 600;
