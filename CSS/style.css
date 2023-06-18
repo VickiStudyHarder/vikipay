@@ -701,6 +701,7 @@ a {
   align-items: center;
 }
 
+
 .nav__list {
   width: 100%;
   margin: 0;
@@ -737,7 +738,13 @@ a {
 
 /* hack */
 .nav__brand {
+  
   transform: translateY(6px);
+}
+
+.nav__brand > img {
+  width: 60px;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -889,6 +896,8 @@ a {
   /* TODO: consider refactoring this to apply to all image  */
   width: 100%;
   max-width: 230px;
+  border-radius: 10px;
+
 }
 
 .footer__copyright {
